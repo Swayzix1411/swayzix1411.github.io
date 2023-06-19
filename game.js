@@ -3,9 +3,12 @@
 
 var canvas = document.createElement("canvas");
 var ctx = canvas.getContext("2d");
-canvas.width=1265;
-canvas.height=600;
 document.body.appendChild(canvas);
+function adjustCanvasSize() {
+	canvas.width = window.innerWidth;
+	canvas.height = window.innerHeight;
+}
+window.addEventListener('resize',adjustCanvasSize())
 
 // Image d'arrière plan
 
@@ -111,13 +114,13 @@ var update = function (modifier) {
 	if (38 in keysDown && hero.y > 0) { // joueur vers le haut
         hero.y -= hero.speed * modifier;
 	}
-	if (40 in keysDown && hero.y < 600-32) { // joueur vers le bas
+	if (40 in keysDown && hero.y < canvas.height-64) { // joueur vers le bas
 		hero.y += hero.speed * modifier;
 	}
 	if (37 in keysDown && hero.x >0) { // joueur vers la gauche
 		hero.x -= hero.speed * modifier;
 	}
-	if (39 in keysDown && hero.x < 1265-32) { // joueur vers la droite
+	if (39 in keysDown && hero.x < canvas.width-64) { // joueur vers la droite
 		hero.x += hero.speed * modifier;	
 	}
 
@@ -199,7 +202,7 @@ var render = function () {
 	ctx.font = "24px Helvetica";
 	ctx.textAlign = "right";
 	ctx.textBaseline = "top";
-	ctx.fillText("Goblins remaining: " + monstersShow, 1201, 32 );
+	ctx.fillText("Goblins remaining: " + monstersShow, canvas.width-70, 32 );
 
 
 };
