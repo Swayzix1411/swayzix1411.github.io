@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -6,43 +5,15 @@
     <title>Attraper le monstre</title>
 
 </head>
-
 <style>
-    canvas {
-        width: 100%;
-        height: 100%;
-    }
+	canvas {
+		width: 100%;
+		height: 100%;
+	}
 </style>
 
 <body>
-    <canvas></canvas>
     <script src="game.js"></script>
-    <div id="joystick" style="width:40%; padding-left:30%; margin-top: 100px;">
-        <svg width="100%" height="100%" viewBox="0 0 100 100">
-            <defs>
-                <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" style="stop-color:rgb(16,16,16);stop-opacity:1" />
-                    <stop offset="100%" style="stop-color:rgb(240,240,240);stop-opacity:1" />
-                </linearGradient>
-                <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" style="stop-color:rgb(240,240,240);stop-opacity:1" />
-                    <stop offset="100%" style="stop-color:rgb(16,16,16);stop-opacity:1" />
-                </linearGradient>
-                <linearGradient id="grad3" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" style="stop-color:rgb(168,168,168);stop-opacity:1" />
-                    <stop offset="100%" style="stop-color:rgb(239,239,239);stop-opacity:1" />
-                </linearGradient>
-            </defs>
-            <circle cx="50" cy="50" r="50" fill="url(#grad1)" />
-            <circle cx="50" cy="50" r="47" fill="url(#grad2)" stroke="black" stroke-width="1.5px" />
-            <circle cx="50" cy="50" r="44" fill="url(#grad3)" />
-            <circle cx="50" cy="50" r="20" fill="#cccccc" stroke="black" stroke-width="1px;"/>
-            <path d="M50,14 54,22 46,22Z" fill="rgba(0,0,0,0.8)" ontouchstart="keysDown[38] = true;" ontouchend= "delete keysDown[38];"/>
-            <path d="M50,86 54,78 46,78Z" fill="rgba(0,0,0,0.8)" ontouchstart="keysDown[40] = true;" ontouchend="delete keysDown[40]" />
-            <path d="M14,50 22,54 22,46Z" fill="rgba(0,0,0,0.8)" ontouchstart="keysDown[37] = true;" ontouchend= "delete keysDown[37];" />
-            <path d="M86,50 78,54 78,46Z" fill="rgba(0,0,0,0.8)" ontouchstart="keysDown[39] = true;" ontouchend= "delete keysDown[39];"/>
-        </svg>
-    </div>
-</body>
 
+</body>
 </html>
